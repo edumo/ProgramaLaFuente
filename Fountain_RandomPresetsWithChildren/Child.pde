@@ -9,8 +9,8 @@ class Child {
 
   void run() {
 
-    float x = noise(noiseOffset.x)*width;
-    float y = noise(noiseOffset.y)*height;
+    float x = noise(noiseOffset.x)*(width+300)-150;
+    float y = noise(noiseOffset.y)*(height+300)-150;
 
     noiseOffset.x += 0.01;
     noiseOffset.y += 0.01;

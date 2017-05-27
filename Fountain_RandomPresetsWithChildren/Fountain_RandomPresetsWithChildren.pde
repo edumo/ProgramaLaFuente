@@ -8,7 +8,7 @@ import netP5.*;
 int numRows = 6;
 int numCols = 6;
 
-int changePresetEvery = 5000;
+int changePresetEvery = 7500;
 int lastPresetChange = -changePresetEvery;
 char[] preset = new char[numRows*numCols+1];
 
