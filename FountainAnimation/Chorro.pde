@@ -1,7 +1,7 @@
 class Chorro {
   int nbPart;
   Particle[] particle;
-  float speedZ = 1.0;
+  float speedZ = 1.0f;
   PVector pos = new PVector();
   public boolean isDifusor = false;
 
@@ -34,44 +34,39 @@ class Chorro {
 
     for (int i = 0; i < nbPart; i++) {
       particle[i].setInitialSpeed(speedZ);
-     
-        
-        println(" particle[i].gravity"+ particle[i].gravity);
+
+      println(" particle[i].gravity" + particle[i].gravity);
     }
   }
-  
+
   public void setIsDifusor() {
-    
+
     for (int i = 0; i < nbPart; i++) {
-      
-      if (isDifusor){
-        particle[i].gravity= -0.0;
-        
+
+      if (isDifusor) {
+        particle[i].gravity = -0.0f;
+
         particle[i].ageMax = 10 + (int) random(10);
-        if(particle[i].age >particle[i].ageMax){
-          particle[i].age = particle[i].ageMax-2;
+        if (particle[i].age > particle[i].ageMax) {
+          particle[i].age = particle[i].ageMax - 2;
         }
-        particle[i].setInitialSpeed(0.2);
-      }else{
-        particle[i].gravity= -0.5;
+        particle[i].setInitialSpeed(0.1f);
+      } else {
+        particle[i].gravity = -0.05f;
         particle[i].ageMax = 50 + (int) random(100);
-        if(particle[i].age >particle[i].ageMax){
-          particle[i].age = particle[i].ageMax-2;
+        if (particle[i].age > particle[i].ageMax) {
+          particle[i].age = particle[i].ageMax - 2;
         }
         particle[i].setInitialSpeed(speedZ);
       }
-        
-        println(" particle[i].gravity"+ particle[i].gravity);
-    }
 
-    
+      println(" particle[i].gravity" + particle[i].gravity);
+    }
   }
 
   public float getChorro() {
     return speedZ;
   }
-
-
 
   // Define here your animation.
   public void animate() {

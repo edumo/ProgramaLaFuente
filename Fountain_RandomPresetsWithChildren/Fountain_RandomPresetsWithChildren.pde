@@ -23,7 +23,7 @@ void setup() {
   frameRate(30);
 
   oscP5 = new OscP5(this, 12000);
-  oscServer = new NetAddress("169.254.105.78", 12000);
+  oscServer = new NetAddress("localhost", 12000);
   
   cs = new ChildSystem();
   for(int f=0; f<5; f++){
